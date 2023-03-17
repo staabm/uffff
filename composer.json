@@ -66,7 +66,7 @@
             "php build/infection.phar"
         ],
         "docs": "SOURCE_DATE_EPOCH=`git log -1 --format=%ct` sphinx-build -M html docs build/docs",
-        "benchmark": "ifCi() { test \"$CI\" && echo \"$1\" || echo \"$2\"; }; phpbench run tests/Benchmark --report=aggregate --retry-threshold=1.5 `ifCi --progress=plain`"
+        "benchmark": "ifCi() { test \"$CI\" && echo \"$1\" || echo \"$2\"; }; phpbench run tests/Benchmark --report=aggregate --retry-threshold=2 `ifCi --progress=plain`"
     },
     "config": {
         "allow-plugins": {
