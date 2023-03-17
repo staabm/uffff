@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Uffff\Benchmark;
+namespace Uffff\Tests\Benchmark;
 
 use PhpBench\Benchmark\Metadata\Annotations\Iterations;
-use function Uffff\unicode;
+use Uffff\Tests\Benchmark\Fixture\FilteredEntity;
+use Uffff\Tests\Benchmark\Fixture\PlainEntity;
 
 final class FilterBench
 {
@@ -21,7 +22,7 @@ final class FilterBench
      */
     public function benchPlainShort(): void
     {
-        $output = self::SHORT . ' ';
+        new PlainEntity(self::SHORT);
     }
 
     /**
@@ -30,7 +31,7 @@ final class FilterBench
      */
     public function benchUnicodeShort(): void
     {
-        $output = unicode(self::SHORT);
+        new FilteredEntity(self::SHORT);
     }
 
     /**
@@ -39,7 +40,7 @@ final class FilterBench
      */
     public function benchPlainMedium(): void
     {
-        $output = self::MEDIUM . ' ';
+        new PlainEntity(self::MEDIUM);
     }
 
     /**
@@ -48,7 +49,7 @@ final class FilterBench
      */
     public function benchUnicodeMedium(): void
     {
-        $output = unicode(self::MEDIUM);
+        new FilteredEntity(self::MEDIUM);
     }
 
     /**
@@ -57,7 +58,7 @@ final class FilterBench
      */
     public function benchPlainLong(): void
     {
-        $output = self::LONG . ' ';
+        new PlainEntity(self::LONG);
     }
 
     /**
@@ -66,6 +67,6 @@ final class FilterBench
      */
     public function benchUnicodeLong(): void
     {
-        $output = unicode(self::LONG);
+        new FilteredEntity(self::LONG);
     }
 }

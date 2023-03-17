@@ -66,7 +66,7 @@
             "php build/infection.phar"
         ],
         "docs": "SOURCE_DATE_EPOCH=`git log -1 --format=%ct` sphinx-build -M html docs build/docs",
-        "benchmark": "phpbench run tests/Benchmark --report=aggregate --retry-threshold=1.0"
+        "benchmark": "phpbench run tests/Benchmark --report=aggregate --retry-threshold=1.5"
     },
     "config": {
         "allow-plugins": {

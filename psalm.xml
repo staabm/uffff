@@ -28,10 +28,10 @@
                 <directory name="tests/Benchmark"/>
             </errorLevel>
         </UnusedClass>
-        <UnusedVariable>
+        <UnusedMethod>
             <errorLevel type="suppress">
                 <directory name="tests/Benchmark"/>
             </errorLevel>
-        </UnusedVariable>
+        </UnusedMethod>
     </issueHandlers>
 </psalm>
