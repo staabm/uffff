@@ -23,5 +23,15 @@
         <MissingReturnType>
             <errorLevel type="error"/>
         </MissingReturnType>
+        <UnusedClass>
+            <errorLevel type="suppress">
+                <directory name="tests/Benchmark"/>
+            </errorLevel>
+        </UnusedClass>
+        <UnusedVariable>
+            <errorLevel type="suppress">
+                <directory name="tests/Benchmark"/>
+            </errorLevel>
+        </UnusedVariable>
     </issueHandlers>
 </psalm>

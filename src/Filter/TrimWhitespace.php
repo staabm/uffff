@@ -16,7 +16,7 @@ readonly final class TrimWhitespace implements Filter
 {
     private const WHITESPACE = '(?![' . BidirectionalMarker::CHARACTERS . '])[\p{Zs}\p{Cc}]+';
 
-    private const ANY_LEADING_OR_TRAILING_WHITESPACE = '/^' . self::WHITESPACE . '|' . self::WHITESPACE . '$/u';
+    private const ANY_LEADING_OR_TRAILING_WHITESPACE = '/^' . self::WHITESPACE . '/uDS';
 
     /**
      * @phpstan-pure

@@ -15,7 +15,7 @@ use Webmozart\Assert\Assert;
 readonly final class HarmonizeNewlines implements Filter
 {
     // Order matters, Windows must come first
-    private const ANY_NEWLINE = '/(?:' . Newline::WINDOWS->value . '|' . Newline::MAC->value . '|' . Newline::UNIX->value . ')/';
+    private const ANY_NEWLINE = '/(?:' . Newline::WINDOWS->value . '|' . Newline::MAC->value . '|' . Newline::UNIX->value . ')/S';
 
     public function __construct(
         private Newline $newline

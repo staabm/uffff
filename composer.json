@@ -20,7 +20,8 @@
         "rregeer/phpunit-coverage-check": "^0.3.1",
         "slevomat/coding-standard": "^8.8",
         "steos/quickcheck": "^v2.0",
-        "roave/better-reflection": "^6.8"
+        "roave/better-reflection": "^6.8",
+        "phpbench/phpbench": "^1.2"
     },
     "license": "MIT",
     "autoload": {
@@ -64,7 +65,8 @@
             "test -f build/infection.phar || curl -Lf https://github.com/infection/infection/releases/download/0.26.19/infection.phar > build/infection.phar",
             "php build/infection.phar"
         ],
-        "docs": "SOURCE_DATE_EPOCH=`git log -1 --format=%ct` sphinx-build -M html docs build/docs"
+        "docs": "SOURCE_DATE_EPOCH=`git log -1 --format=%ct` sphinx-build -M html docs build/docs",
+        "benchmark": "phpbench run tests/Benchmark --report=aggregate --retry-threshold=1.0"
     },
     "config": {
         "allow-plugins": {

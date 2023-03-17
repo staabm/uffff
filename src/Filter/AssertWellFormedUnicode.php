@@ -13,7 +13,7 @@ use Webmozart\Assert\Assert;
  */
 readonly final class AssertWellFormedUnicode implements Filter
 {
-    private const ALL_VALID_CODEPOINTS = '/^.*$/us';
+    private const ALL_VALID_CODEPOINTS = '/^.*$/usS';
 
     /**
      * @phpstan-pure

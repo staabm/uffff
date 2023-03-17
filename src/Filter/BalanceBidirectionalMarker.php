@@ -13,7 +13,7 @@ use Uffff\Value\BidirectionalMarker;
  */
 readonly final class BalanceBidirectionalMarker implements Filter
 {
-    private const ANY_BIDIRECTIONAL_MARKER_CHARACTERS = '/[' . BidirectionalMarker::CHARACTERS . ']/u';
+    private const ANY_BIDIRECTIONAL_MARKER_CHARACTERS = '/[' . BidirectionalMarker::CHARACTERS . ']/uS';
 
     /**
      * @phpstan-pure

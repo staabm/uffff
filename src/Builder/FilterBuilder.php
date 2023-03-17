@@ -82,7 +82,7 @@ final class FilterBuilder
                     NormalizeForm::class,
                     [$this->normalizationForm],
                     $this->normalizationForm->name
-                ),
+                ), // Relatively expensive, takes ~40% of the overall time
                 FlyweightFactory::createWith(HarmonizeNewlines::class, [$this->newline], $this->newline->name),
                 ...$this->trimWhitespace ? [FlyweightFactory::create(TrimWhitespace::class)] : [],
                 FlyweightFactory::create(BalanceBidirectionalMarker::class),
