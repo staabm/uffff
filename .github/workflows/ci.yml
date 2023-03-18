@@ -20,7 +20,7 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
           extensions: intl, pcre
-          coverage: ${{ matrix.check == 'test' || matrix.check == 'test-mutations' && 'xdebug' || '' }}
+          coverage: ${{ (matrix.check == 'test' || matrix.check == 'test-mutations') && 'xdebug' || '' }}
       - uses: ramsey/composer-install@2.2.0
       - uses: lstrojny/phpunit-matcher-action@patch-1
 
