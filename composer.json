@@ -10,7 +10,6 @@
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
-        "ext-xdebug": "*",
         "phpunit/phpunit": "^10.0",
         "phpstan/phpstan": "^1.10",
         "vimeo/psalm": "^5.8",
